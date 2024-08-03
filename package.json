@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +14,11 @@
   "dependencies": {
     "@apollo/server": "^4.10.5",
     "dotenv": "^16.4.5",
-    "graphql": "^16.9.0",
-    "ts-node": "^10.9.2"
+    "graphql": "^16.9.0"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
+    "@types/node": "^22.1.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   }
 }
