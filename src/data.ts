@@ -1,4 +1,4 @@
-export const games = [
+const games = [
   {
     id: 1,
     game: "The Legend of Zelda: Breath of the Wild",
@@ -42,7 +42,7 @@ export const games = [
   },
 ];
 
-export const authors = [
+const authors = [
   {
     id: 1,
     name: "J.K. Rowling",
@@ -75,7 +75,7 @@ export const authors = [
   },
 ];
 
-export const reviews = [
+const reviews = [
   {
     id: 1,
     rating: 5,
@@ -112,3 +112,5 @@ export const reviews = [
     game_id: 5,
   },
 ];
+
+export { reviews, authors, games };

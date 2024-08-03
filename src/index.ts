@@ -1,8 +1,8 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import dotenv from "dotenv";
-import { typeDefs } from "./graphql/schemas/schemas";
-import { games, reviews, authors } from "./data";
+import { games, authors, reviews } from './data';
+import { typeDefs } from "./graphql/schemas/schema";
 dotenv.config();
 
 const resolvers = {
@@ -21,6 +21,10 @@ const resolvers = {
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
-const { url } = await startStandaloneServer(server, {
-  listen: { port: Number(process.env.PORT || 4000) },
-});
+const startApplication = async () => {
+  const { url } = await startStandaloneServer(server, {
+    listen: { port: Number(process.env.PORT || 4000) },
+  });
+};
+
+startApplication();
