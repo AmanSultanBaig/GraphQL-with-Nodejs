@@ -1,22 +1,22 @@
 const games = [
   {
     id: 1,
-    game: "The Legend of Zelda: Breath of the Wild",
+    title: "The Legend of Zelda: Breath of the Wild",
     platforms: ["Nintendo Switch", "Wii U"],
   },
   {
     id: 2,
-    game: "God of War",
+    title: "God of War",
     platforms: ["PlayStation 4", "PlayStation 5"],
   },
   {
     id: 3,
-    game: "Cyberpunk 2077",
+    title: "Cyberpunk 2077",
     platforms: ["PC", "PlayStation 4", "Xbox One", "Google Stadia"],
   },
   {
     id: 4,
-    game: "Minecraft",
+    title: "Minecraft",
     platforms: [
       "PC",
       "Mac",
@@ -30,7 +30,7 @@ const games = [
   },
   {
     id: 5,
-    game: "Among Us",
+    title: "Among Us",
     platforms: [
       "PC",
       "iOS",
