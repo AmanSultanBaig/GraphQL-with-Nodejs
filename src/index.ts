@@ -29,14 +29,29 @@ const resolvers = {
   },
   Game: {
     reviews(parent) {
-        return reviews.filter((r) => r.game_id == parent.id);
-    }
+      return reviews.filter((r) => r.game_id == parent.id);
+    },
   },
   Author: {
     reviews(parent) {
-        return reviews.filter((r) => r.game_id == parent.id);
-    }
-  }
+      return reviews.filter((r) => r.game_id == parent.id);
+    },
+  },
+
+  Mutation: {
+    deleteGame(_, args) {
+      return games.filter((game) => game.id != args.id);
+    },
+    addGame(_, args) {
+      let game = {
+        ...args.game,
+        id: Math.floor(Math.random() * 1000000).toString(),
+      };
+
+      games.push(game);
+      return game;
+    },
+  },
 };
 
 const server = new ApolloServer({ typeDefs, resolvers });
