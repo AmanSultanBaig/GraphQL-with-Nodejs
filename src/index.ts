@@ -51,6 +51,15 @@ const resolvers = {
       games.push(game);
       return game;
     },
+    editGame(_, args) {
+      let game = games.find((x) => x.id == args.id);
+      if (game) {
+        game.title = args.game.title;
+        game.platforms = args.game.platforms;
+        return game;
+      }
+      return { message: "Invalid Id, Game not found!" };
+    },
   },
 };
 
