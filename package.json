@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && node addExtensions.js && nodemon dist/index.js",
+    "build": "tsc && node addExtensions.js && nodemon dist/index.js --watch",
     "start": "nodemon dist/index.js"
   },
   "keywords": [],
